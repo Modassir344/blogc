@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+hr {
+    color: white;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: black;
+}
+
+.container {
+    max-width: 1050px;
+    width: 90%;
+    margin: auto;
+}
+
+nav {
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+   
+}
+
+.navbar {
+    width: 100%;
+    box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+    background-color: white;
+  
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+    
+  
+}
+
+.navbar .menu-items {
+    display: flex;
+}
+
+.navbar .nav-container li {
+    list-style: none;
+}
+
+.navbar .nav-container a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 0.7rem;
+}
+
+.navbar .nav-container a:hover {
+    font-weight: bolder;
+}
+
+.nav-container {
+    display: block;
+    position: relative;
+    height: 60px;
+   
+}
+
+.nav-container .checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.nav-container .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #0e2431;
+}
+
+.nav-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.navbar .menu-items {
+    padding-top: 120px;
+    box-shadow: inset 0 0 white;
+    height: 100vh;
+    width: 100%;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 50px;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+  
+}
+
+.navbar .menu-items li {
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.logo {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 1.2rem;
+    color: #0e2431;
+}
+
+.nav-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .logo {
+    display: none;
+}
+
+.cards {
+    width: 80vw;
+    display: flex;
+    margin:20px 13vw 20px 7vw;
+    border: 0.2vh solid white;
+    color: white;
+    border-radius: 10px;
+
+}
+.cards .insider{
+    flex: 9;
+
+}
+
+.insider{
+    box-sizing: cover;
+}
+
+body.menu-open .cards {
+    display: none;
+}
+
+.title {
+    text-align: center;
+    padding: 2vh 0px;
+    position: relative;
+}
+
+.title hr {
+  position: absolute;
+ left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  color: white;
+}
+
+.des {
+    text-align: center;
+    margin: 0px 4vh;
+    padding: 2vh;
+}
+
+.btn {
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.5s;
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    width: 100px;
+    height: 26px;
+    margin-top: 10px;
+}
+.btn:hover{
+    background-color:white ;
+    color: black;
+    transition: 0.5s;
+    width: 105px;
+    height: 28px;
+}
+.fab-container {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+    z-index: 90;
+}
+
+.iconbutton {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: black;
+    box-shadow: 4px 4px 3px grey;
+    position: relative; /* Added position relative */
+}
+
+.button {
+    width: 60px;
+    height: 60px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease-in-out;
+    position: absolute; /* Added position absolute */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the button */
+}
+
+.iconbutton i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: black;
+}
+
+.fa {
+    font-size: xx-large;
+   
+}
+.fa a{
+    text-decoration: none;
+
+}
+
+
+/* Adjust styles for the "btn-container" class */
+.btn-container {
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Hide the "Read More" button when the full text is shown */
+.cards .insider .des .full-text {
+    display: none;
+}
+
+/* Hide the "Read Less" button when the limited text is shown */
+.cards .insider .des .limited-text {
+    display: block;
+}
+
+/* Adjust styles for the "btn" class */
+.btn.read-more {
+    display:block;
+   
+}
+
+/* Adjust styles for the "btn" class */
+.btn.read-less {
+    display: none;
+}
+.nametag{
+    text-align: end;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+ 
